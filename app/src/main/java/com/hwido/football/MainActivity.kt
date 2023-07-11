@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         auth = Firebase.auth
 
+        // 로그인 시키기
         val loginBtn = findViewById<Button>(R.id.loginBtn)
         loginBtn.setOnClickListener {
             val ID = findViewById<EditText>(R.id.IDArea)
@@ -27,6 +28,8 @@ class MainActivity : AppCompatActivity() {
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
                         Toast.makeText(this, "성공", Toast.LENGTH_SHORT).show()
+                        
+                        // 하단에 로그인 성공시 다음 페이지로 넘어가는 코드 필요
                     }
                     else {
                         Toast.makeText(this, "실패", Toast.LENGTH_SHORT).show()
@@ -34,6 +37,7 @@ class MainActivity : AppCompatActivity() {
                 }
         }
 
+        // 회원가입 버튼 누르면 signin인 회원가입 페이지로 넘어가게 된다
         val joininBtn = findViewById<Button>(R.id.joinBtn)
         joininBtn.setOnClickListener {
             val intent = Intent(this, signin::class.java)
