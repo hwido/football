@@ -34,7 +34,7 @@ class signin : AppCompatActivity() {
             // 인터넷 찾아보면 sql과 php 연동하여 저장하는 방식 채택하기에, 이에 대한 회의 필요
 
 
-            auth.createUserWithEmailAndPassword(ID.text.toString(), password.text.toString())
+            auth.createUserWithEmailAndPassword(email.text.toString(), password.text.toString())
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
                         Toast.makeText(this, "성공", Toast.LENGTH_SHORT).show()

@@ -21,10 +21,10 @@ class MainActivity : AppCompatActivity() {
         // 로그인 시키기
         val loginBtn = findViewById<Button>(R.id.loginBtn)
         loginBtn.setOnClickListener {
-            val ID = findViewById<EditText>(R.id.IDArea)
+            val email = findViewById<EditText>(R.id.IDArea)
             val password = findViewById<EditText>(R.id.passwordArea)
 
-            auth.signInWithEmailAndPassword(ID.text.toString(), password.text.toString())
+            auth.signInWithEmailAndPassword(email.text.toString(), password.text.toString())
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
                         Toast.makeText(this, "성공", Toast.LENGTH_SHORT).show()
