@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         // 로그인 시키기
         val loginBtn = findViewById<Button>(R.id.loginBtn)
         loginBtn.setOnClickListener {
-            val email = findViewById<EditText>(R.id.IDArea)
+            val email = findViewById<EditText>(R.id.emailArea)
             val password = findViewById<EditText>(R.id.passwordArea)
 
             auth.signInWithEmailAndPassword(email.text.toString(), password.text.toString())
