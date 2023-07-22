@@ -10,19 +10,19 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-class MainActivity : AppCompatActivity() {
+class LoginMainpage : AppCompatActivity() {
     private lateinit var auth : FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.login_page)
+        setContentView(R.layout.login_mainpage)
 
         auth = Firebase.auth
 
         // 로그인 시키기
-        val loginBtn = findViewById<Button>(R.id.loginBtn)
+        val loginBtn = findViewById<Button>(R.id.login_mainpage_loginBtn)
         loginBtn.setOnClickListener {
-            val email = findViewById<EditText>(R.id.emailArea)
-            val password = findViewById<EditText>(R.id.passwordArea)
+            val email = findViewById<EditText>(R.id.login_mainpage_emailArea)
+            val password = findViewById<EditText>(R.id.login_mainpage_passwordArea)
 
             auth.signInWithEmailAndPassword(email.text.toString(), password.text.toString())
                 .addOnCompleteListener(this) { task ->
@@ -38,9 +38,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         // 회원가입 버튼 누르면 signin인 회원가입 페이지로 넘어가게 된다
-        val joininBtn = findViewById<Button>(R.id.joinBtn)
+        val joininBtn = findViewById<Button>(R.id.login_mainpage_joinBtn)
         joininBtn.setOnClickListener {
-            val intent = Intent(this, signin::class.java)
+            val intent = Intent(this, LoginSigninpage::class.java)
             startActivity(intent)
         }
     }

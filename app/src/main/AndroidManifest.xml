@@ -13,10 +13,19 @@
         android:theme="@style/Theme.Football"
         tools:targetApi="31">
         <activity
-            android:name=".signin"
+            android:name=".LoginTeamActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginIndividualActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginChoose"
+            android:exported="false" />
+        <activity
+            android:name=".LoginSigninpage"
+            android:exported="false" />
+        <activity
+            android:name=".LoginMainpage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
