@@ -12,10 +12,10 @@ class LoginChoose : AppCompatActivity() {
         binding = LoginChooseBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.teamCardView.setOnClickListener {
+        binding.teamCardView.setOnClickListener { // 원래 teamCardView가 아닌, login_choose_teamCardView 사용하려 했으나, 그럴 경우 에러 발생
             goToTeamMaker()
         }
-        binding.individualCardView.setOnClickListener {
+        binding.individualCardView.setOnClickListener { // 원래 individualCardView가 아닌, login_choose_individualCardView 사용하려 했으나, 그럴 경우 에러 발생
             goToIndividualMaker()
         }
     }

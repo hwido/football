@@ -15,7 +15,7 @@ class LoginTeamActivity : AppCompatActivity() {
         binding = LoginTeamactivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.goToIndividualButton.setOnClickListener {
+        binding.goToIndividualButton.setOnClickListener { // 원래 goToIndividualButton이 아닌, login_teamactivity_goToIndividualButton 사용하려 했으나, 그럴 경우 에러 발생
             goToIndividualMaker()
         }
 
