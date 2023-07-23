@@ -23,3 +23,5 @@ this is project with my friends
 
 2023/07/23
 3명이서 만든 것들을 연결시키는 작업 진행중. 몇몇 오류와 이름변경, 기능 추가가 이루어질 예정이다.
+databinding 중에 unresolved reference error 발생. 이는, xml 파일을 layout으로 묶어주자 해결되었다.
+이후, xml파일의 id 가져오는 과정에서 통일된 id 인식하지 못하는 에러 발생 -> 기존 id로 교체시 제대로 인식하였다.
