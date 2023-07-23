@@ -3,14 +3,13 @@ package com.hwido.football
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.football_manager.databinding.ActivityMainBinding
+import com.hwido.football.databinding.LoginChooseBinding
 
 class LoginChoose : AppCompatActivity() {
-    private lateinit var binding : ActivityMainBinding
-
+    private lateinit var binding : LoginChooseBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = LoginChooseBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.teamCardView.setOnClickListener {
@@ -19,10 +18,10 @@ class LoginChoose : AppCompatActivity() {
         binding.individualCardView.setOnClickListener {
             goToIndividualMaker()
         }
-
     }
+
     private fun goToTeamMaker(){
-        val intent = Intent(baseContext, TeamViewActivity::class.java)
+        val intent = Intent(baseContext, LoginTeamActivity::class.java)
         startActivity(intent)
     }
     private fun goToIndividualMaker(){

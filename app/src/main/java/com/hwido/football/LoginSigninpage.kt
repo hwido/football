@@ -37,8 +37,8 @@ class LoginSigninpage : AppCompatActivity() {
                     if (task.isSuccessful) {
                         Toast.makeText(this, "성공", Toast.LENGTH_SHORT).show()
                         
-                        // 회원가입 성공시, MainActivity인 로그인 페이지로 넘어가게 된다
-                        val intent = Intent(this, LoginMainpage::class.java)
+                        // 회원가입 성공시, 팀/개인 가입 페이지로 넘어가게 된다
+                        val intent = Intent(this, LoginChoose::class.java)
                         startActivity(intent)
                     }
                     else {

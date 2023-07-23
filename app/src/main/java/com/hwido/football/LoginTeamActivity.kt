@@ -3,16 +3,16 @@ package com.hwido.football
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.hwido.football.databinding.ActivityViewBinding
+import com.hwido.football.databinding.LoginTeamactivityBinding
 
-class LoginTeamViewActivity : AppCompatActivity() {
-    private lateinit var binding : ActivityViewBinding
+class LoginTeamActivity : AppCompatActivity() {
+    private lateinit var binding : LoginTeamactivityBinding
 //    private val CAMERA_REQUEST_CODE = 1
 //    private val GALLERY_REQUEST_CODE = 2
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityViewBinding.inflate(layoutInflater)
+        binding = LoginTeamactivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.goToIndividualButton.setOnClickListener {
