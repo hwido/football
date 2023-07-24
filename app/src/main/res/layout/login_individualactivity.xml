@@ -4,10 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginIndividualActivity"
-    android:id="@+id/membership_personal_display">
+    android:id="@+id/login_individualactivity_display">
 
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -55,7 +56,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/membership_personal_name"
+                android:id="@+id/login_individualactivity_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
@@ -75,7 +76,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/membership_personal_birth"
+                android:id="@+id/login_individualactivity_birth"
                 android:layout_width="180dp"
                 android:layout_height="wrap_content"
                 android:hint="yyyymmdd"
@@ -95,7 +96,7 @@
             android:layout_height="60dp">
 
             <EditText
-                android:id="@+id/membership_personal_team"
+                android:id="@+id/login_individualactivity_team"
                 android:layout_width="222dp"
                 android:layout_height="50dp"
                 android:hint="########"
@@ -103,7 +104,7 @@
 
 
             <Button
-                android:id="@+id/membership_personal_teamButton"
+                android:id="@+id/login_individualactivity_teamButton"
                 android:layout_width="120dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="5dp"
@@ -125,7 +126,7 @@
                     android:text="신장" />
 
                 <EditText
-                    android:id="@+id/membership_personal_height"
+                    android:id="@+id/login_individualactivity_height"
                     android:layout_width="130dp"
                     android:layout_height="50dp"
 
@@ -144,7 +145,7 @@
                     android:text="몸무게" />
 
                 <EditText
-                    android:id="@+id/membership_personal_weight"
+                    android:id="@+id/login_individualactivity_weight"
                     android:layout_width="130dp"
                     android:layout_height="50dp"
 
@@ -168,7 +169,7 @@
                     android:text="주 발" />
 
                 <EditText
-                    android:id="@+id/membership_personal_foot"
+                    android:id="@+id/login_individualactivity_foot"
                     android:layout_width="60dp"
                     android:layout_height="50dp"
 
@@ -188,7 +189,7 @@
                     android:text="선호 포지션" />
 
                 <EditText
-                    android:id="@+id/membership_personal_position"
+                    android:id="@+id/login_individualactivity_position"
                     android:layout_width="150dp"
                     android:layout_height="50dp"
 
@@ -221,7 +222,7 @@
         </RadioGroup>
 
         <CheckBox
-            android:id="@+id/membership_personal_check"
+            android:id="@+id/login_individualactivity_check"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="이용약관에 동의합니다."
@@ -242,7 +243,7 @@
 
 
             <Button
-                android:id="@+id/membership_personal_finalButton"
+                android:id="@+id/login_individualactivity_finalButton"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"

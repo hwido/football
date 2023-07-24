@@ -34,7 +34,7 @@ class LoginIndividualActivity : Fragment() {
 //        fbFirestore = FirebaseFirestore.getInstance()
 
 //        val check = view.findViewById<EditText>(R.id.membership_personal_check)
-        val finalButton = view.findViewById<Button>(R.id.membership_personal_finalButton)
+        val finalButton = view.findViewById<Button>(R.id.login_individualactivity_finalButton)
 //
 //
         finalButton.setOnClickListener {
@@ -43,15 +43,15 @@ class LoginIndividualActivity : Fragment() {
             val myRef = database.getReference("membership_personal")
 //            val myRef = database.getReference("membership_personal").child(Firebase.auth.currentUser!!.uid)
 
-            val birth = view.findViewById<EditText>(R.id.membership_personal_birth)?.text.toString()
+            val birth = view.findViewById<EditText>(R.id.login_individualactivity_birth)?.text.toString()
 
-            val foot = view.findViewById<EditText>(R.id.membership_personal_foot).text.toString()
-            val height = view.findViewById<EditText>(R.id.membership_personal_height).text.toString()
-            val name = view.findViewById<EditText>(R.id.membership_personal_name).text.toString()
-            val position = view.findViewById<EditText>(R.id.membership_personal_position).text.toString()
-            val team = view.findViewById<EditText>(R.id.membership_personal_team).text.toString()
-            val teamButton = view.findViewById<Button>(R.id.membership_personal_teamButton)
-            val weight = view.findViewById<EditText>(R.id.membership_personal_weight).text.toString()
+            val foot = view.findViewById<EditText>(R.id.login_individualactivity_foot).text.toString()
+            val height = view.findViewById<EditText>(R.id.login_individualactivity_height).text.toString()
+            val name = view.findViewById<EditText>(R.id.login_individualactivity_name).text.toString()
+            val position = view.findViewById<EditText>(R.id.login_individualactivity_position).text.toString()
+            val team = view.findViewById<EditText>(R.id.login_individualactivity_team).text.toString()
+            val teamButton = view.findViewById<Button>(R.id.login_individualactivity_teamButton)
+            val weight = view.findViewById<EditText>(R.id.login_individualactivity_weight).text.toString()
 
             val data = LoginMemberPersonalData(birth, foot, height, name, position, team, weight)
             print(data)
