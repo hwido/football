@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Football"
         tools:targetApi="31">
         <activity
-            android:name=".LoginMembershipPersonalFragment"
+            android:name=".LoginIndividualActivity"
             android:exported="false" />
         <activity
             android:name=".LoginChoose"

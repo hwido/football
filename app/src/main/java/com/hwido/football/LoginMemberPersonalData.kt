@@ -3,7 +3,7 @@ package com.hwido.football
 import android.widget.Button
 import android.widget.EditText
 
-data class MemberPersonalData(var birth : String? = null,
+data class LoginMemberPersonalData(var birth : String? = null,
                               var foot : String? = null,
                               var height : String? = null,
                               var name : String? = null,
