@@ -69,6 +69,9 @@ class LoginIndividualActivity : AppCompatActivity() {
                 .push()
                 .setValue(data)
 
+            val intent = Intent(this, LoginMainpage::class.java)
+            startActivity(intent)
+
         }
 
         binding.changeProfileTakePictureIndividual.setOnClickListener {
