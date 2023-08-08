@@ -69,6 +69,7 @@ class LoginIndividualActivity : AppCompatActivity() {
                 .push()
                 .setValue(data)
 
+            // 회원가입 이후, 로그인 페이지로 돌아간다
             val intent = Intent(this, LoginMainpage::class.java)
             startActivity(intent)
 
