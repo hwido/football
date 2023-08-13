@@ -23,6 +23,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.ktx.database
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 import com.hwido.football.databinding.LoginIndividualactivityBinding
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
@@ -38,6 +40,9 @@ class LoginIndividualActivity : AppCompatActivity() {
 
     private var fbAuth : FirebaseAuth? = null
     private var fbFirestore : FirebaseFirestore? = null
+
+    //private var storage : FirebaseStorage? = null //파이어 스토리지에 접근하기 위해 사용
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = LoginIndividualactivityBinding.inflate(layoutInflater)
@@ -46,12 +51,15 @@ class LoginIndividualActivity : AppCompatActivity() {
         fbAuth = FirebaseAuth.getInstance()
         fbFirestore = FirebaseFirestore.getInstance()
 
+        //storage = FirebaseStorage.getInstance() // 스토리지에 접근하기 위한 인스턴스 사용
+
         //val check = findViewById<EditText>(R.id.login_individualactivity_check)
         val finalButton = findViewById<Button>(R.id.login_individualactivity_finalButton)
 
         finalButton.setOnClickListener {
             val database = Firebase.database
             val myRef = database.getReference("membership_personal")
+
             val birth = findViewById<EditText>(R.id.login_individualactivity_birth)?.text.toString()
             val foot = findViewById<EditText>(R.id.login_individualactivity_foot).text.toString()
             val height = findViewById<EditText>(R.id.login_individualactivity_height).text.toString()
