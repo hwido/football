@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/main_mainpage_schedule"
+        android:title="일정"
+        android:icon="@drawable/ic_schedule_foreground"/>
+
+    <item android:id="@+id/main_mainpage_teamRanking"
+        android:title="순위"
+        android:icon="@drawable/ic_teamRanking_foreground"/>
+
+    <item android:id="@+id/main_mainpage_teamRecord"
+        android:title="팀 기록"
+        android:icon="@drawable/ic_teamRecord_foreground"/>
+
+    <item android:id="@+id/main_mainpage_individualRecord"
+        android:title="개인 기록"
+        android:icon="@drawable/ic_individualRecord_foreground"/>
+</menu>
