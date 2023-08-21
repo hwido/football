@@ -2,7 +2,8 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
-    id 'kotlin-android-extensions'
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -38,6 +39,10 @@ android {
     }
 
     dataBinding {
+        enabled = true
+    }
+
+    viewBinding {
         enabled = true
     }
 }

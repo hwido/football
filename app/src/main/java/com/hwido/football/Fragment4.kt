@@ -2,6 +2,5 @@ package com.hwido.football
 
 import androidx.fragment.app.Fragment
 
-class Fragment1 : Fragment(R.layout.fragment_1){
-
+class Fragment4 : Fragment(R.layout.fragment_4) {
 }
