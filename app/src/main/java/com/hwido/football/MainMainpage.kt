@@ -2,35 +2,49 @@ package com.hwido.football
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import androidx.fragment.app.Fragment
 
 
-class MainMainpage : AppCompatActivity() {
+class MainMainpage : AppCompatActivity(), View.OnClickListener{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_mainpage)
 
-        val firstFragment = Fragment1()
-        val secondFragment = Fragment2()
-        val thirdFragment = Fragment3()
-        val forthFragment = Fragment4()
-
-        setCurrentFragment(firstFragment)
-
-//        main_mainpage_navigation.setOnNavigationItemSelectedListener {
-//            when(it.itemId){
-//                R.id.main_mainpage_schedule->setCurrentFragment(firstFragment)
-//                R.id.main_mainpage_teamRanking->setCurrentFragment(secondFragment)
-//                R.id.main_mainpage_teamRecord->setCurrentFragment(thirdFragment)
-//                R.id.main_mainpage_individualRecord->setCurrentFragment(forthFragment)
-//            }
-//            true
-//        }
+        val fm = supportFragmentManager
+        val fragmentTransaction = fm.beginTransaction()
+        fragmentTransaction.add(R.id.main_mainpage_fragment, Fragment1())
+        fragmentTransaction.commit()
     }
 
-    fun setCurrentFragment(fragment: Fragment)=
-        supportFragmentManager.beginTransaction().apply {
-            replace(R.id.main_mainpage_fragment,fragment)
-            commit()
+    override fun onClick(v: View?) {
+        Log.d("버튼 클릭!", "버튼 클릭!")
+
+        var fr: Fragment? = null
+
+        when (v?.id) {
+            R.id.main_mainpage_schedule -> {
+                fr = Fragment1()
+            }
+            R.id.main_mainpage_teamranking -> {
+                fr = Fragment2()
+            }
+            R.id.main_mainpage_teamrecord -> {
+                fr = Fragment3()
+            }
+            R.id.main_mainpage_individualrecord -> {
+                fr = Fragment4()
+            }
         }
+
+        val fm = supportFragmentManager
+        val fragmentTransaction = fm.beginTransaction()
+
+        // fragment 교체
+        fragmentTransaction.replace(R.id.main_mainpage_fragment, fr!!)
+        fragmentTransaction.commit()
+    }
+
+
 }

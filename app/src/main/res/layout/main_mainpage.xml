@@ -44,49 +44,24 @@
             android:layout_marginTop="5dp"
             android:weightSum="4">
 
-            <Button
-                android:id="@+id/main_mainpage_schedule"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:text="일정"
-                android:textSize="15sp"
-                />
-
-            <Button
-                android:id="@+id/main_mainpage_teamranking"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:text="순위"
-                android:textSize="15sp"
-                />
-
-            <Button
-                android:id="@+id/main_mainpage_teamrecord"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:text="팀 기록"
-                android:textSize="15sp"
-                />
-
-            <Button
-                android:id="@+id/main_mainpage_individualrecord"
-                android:layout_width="110dp"
-                android:layout_height="50dp"
-                android:text="개인 기록"
-                android:textSize="15sp"
-                />
 
         </LinearLayout>
 
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_mainpage_fragmentMenu"
+            android:name="com.hwido.football.FragmentMenu"
+            tools:layout="@layout/fragment_menu"
+            tools:ignore="MissingConstraints"
+            />
 
         <FrameLayout
             android:id="@+id/main_mainpage_fragment"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_mainpage_fragmentMenu"
+            app:layout_constraintStart_toStartOf="parent">
 
         </FrameLayout>
 
