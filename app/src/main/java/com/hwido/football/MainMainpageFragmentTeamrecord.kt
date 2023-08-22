@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 
-class Fragment4 : Fragment() {
+class MainMainpageFragmentTeamrecord : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_4, container, false)
+        return inflater.inflate(R.layout.main_mainpage_fragment_teamrecord, container, false)
     }
 }

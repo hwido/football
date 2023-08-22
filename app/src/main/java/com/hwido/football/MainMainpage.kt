@@ -14,7 +14,7 @@ class MainMainpage : AppCompatActivity(), View.OnClickListener{
 
         val fm = supportFragmentManager
         val fragmentTransaction = fm.beginTransaction()
-        fragmentTransaction.add(R.id.main_mainpage_fragment, Fragment1())
+        fragmentTransaction.add(R.id.main_mainpage_fragment, MainMainpageFragmentSchedule())
         fragmentTransaction.commit()
     }
 
@@ -25,16 +25,16 @@ class MainMainpage : AppCompatActivity(), View.OnClickListener{
 
         when (v?.id) {
             R.id.main_mainpage_schedule -> {
-                fr = Fragment1()
+                fr = MainMainpageFragmentSchedule()
             }
             R.id.main_mainpage_teamranking -> {
-                fr = Fragment2()
+                fr = MainMainpageFragmentTeamranking()
             }
             R.id.main_mainpage_teamrecord -> {
-                fr = Fragment3()
+                fr = MainMainpageFragmentTeamrecord()
             }
             R.id.main_mainpage_individualrecord -> {
-                fr = Fragment4()
+                fr = MainMainpageFragmentIndividualrecord()
             }
         }
 

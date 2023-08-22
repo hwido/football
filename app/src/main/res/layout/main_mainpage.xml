@@ -51,8 +51,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/main_mainpage_fragmentMenu"
-            android:name="com.hwido.football.FragmentMenu"
-            tools:layout="@layout/fragment_menu"
+            android:name="com.hwido.football.MainMainpageFragmentMenu"
+            tools:layout="@layout/main_mainpage_fragment_menu"
             tools:ignore="MissingConstraints"
             />
 
