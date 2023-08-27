@@ -1,9 +1,11 @@
 package com.hwido.football
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import androidx.fragment.app.Fragment
 
 
@@ -16,6 +18,26 @@ class MainMainpage : AppCompatActivity(), View.OnClickListener{
         val fragmentTransaction = fm.beginTransaction()
         fragmentTransaction.add(R.id.main_mainpage_fragment, MainMainpageFragmentSchedule())
         fragmentTransaction.commit()
+
+        // 하단 버튼
+        val mainBtnmain = findViewById<Button>(R.id.main_button_main)
+        val mainBtnteam = findViewById<Button>(R.id.main_button_team)
+        val mainBtnIndividual = findViewById<Button>(R.id.main_button_individual)
+        val mainBtnSetting = findViewById<Button>(R.id.main_button_setting)
+
+        mainBtnmain.setOnClickListener {
+        }
+
+        mainBtnteam.setOnClickListener {
+            val intent = Intent(baseContext, MainTeampage::class.java)
+            startActivity(intent)
+        }
+
+        mainBtnIndividual.setOnClickListener {
+        }
+
+        mainBtnSetting.setOnClickListener {
+        }
     }
 
     override fun onClick(v: View?) {

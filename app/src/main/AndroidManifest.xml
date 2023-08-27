@@ -25,6 +25,9 @@
             android:name=".MainMainpage"
             android:exported="false" />
         <activity
+            android:name=".MainTeampage"
+            android:exported="false" />
+        <activity
             android:name=".LoginChoose"
             android:exported="false" />
         <activity
